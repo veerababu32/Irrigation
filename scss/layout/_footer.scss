@@ -1,0 +1,160 @@
+@import "../helpers/_helpers-dir";
+
+.grass-img{
+    width: 100%;
+}
+
+.footer-section{
+    width: 100%;
+    background-color: $vidc-heading-color;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include padding(16px, 16px, 16px, 16px);
+        font-family: $family;
+        color: $white-color;
+        width: 1125px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .footer-left-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div{
+        .subscribe>input{
+            width:70%;
+            height:44px;
+            background-color: $agricultural-heading-color;
+            border-radius:20px;
+            border-style:none;
+            @include padding(0, 300px, 0, 10px);
+        }
+
+        .subscribe-btn{
+            background-color: $white-color;
+            color: $black-color;
+            position:relative;
+            border-radius:22px;
+            border-style:none;
+            font-weight:bold;
+            font-size:16px;
+            padding: 10px;
+            top:2px;
+            left: -157px;
+            &:hover{
+                background-color: $agricultural-heading-color;
+                cursor: pointer;
+            }
+        }
+
+        .subscribe h3{
+            margin-top: 0;
+            font-size:24px;
+            color:$white-color;
+        }
+
+        ::placeholder{
+            color: $white-color;
+            font-size: 14px;
+            @include padding(0, 0, 0, 10px);
+        }
+    }
+
+    .footer-links-section{
+        display: flex;
+        @include padding(20px, 0, 20px, 0);
+    }
+
+    .footer-below-links{
+        @include padding(0, 100px, 0, 0);
+    }
+
+    .blank-space{
+        height: 42px;
+    }
+
+    .footer-copyright-section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text{
+        text-align: end;
+    }
+
+    .footer-right-section{
+        background-color: $agricultural-heading-color;
+        @include padding(30px, 30px, 30px, 30px);
+        border-radius: 20px;
+        width: 375px;
+
+        .footer-contact-us{
+            display: flex;
+        }
+
+        .contact-us-section{
+            width: 100%;
+        }
+
+        .contact-us{
+            margin-top: 0px;
+            width: 250px;
+            padding-bottom: 10px;
+        }
+
+        .location{
+            @include padding(35px, 40px, 0, 10px);
+        }
+
+        .mobile{
+            @include padding(20px, 40px, 0, 10px);
+        }
+
+        .gmail{
+            @include padding(23px, 30px, 0, 10px);
+        }
+
+        .contact-us-info{
+            font-size: 18px;
+            font-weight: 900;
+            margin: 10px 0 5px 0;
+        }
+
+        .follow-us-section{
+            display: flex;
+            @include padding(20px, 0, 0, 0);
+        }
+
+        .follow-us-info{
+            font-size: 18px;
+            font-weight: 900;
+            @include padding(0, 20px, 0, 0);
+        }
+
+        .icons-section{
+            @include padding(0, 0, 0, 10px);
+            .icons{
+                color: $white-color;
+                @include padding(0, 0, 0, 20px);
+            }
+        }
+
+        .hr-line{
+            border: solid 1px #707070;
+        }
+
+        .vr-line{
+            border: #707070 1px solid;
+            height: auto;
+        }
+    }
+
+    a{
+        color: $white-color;
+    }
+}

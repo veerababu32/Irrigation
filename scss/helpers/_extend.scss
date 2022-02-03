@@ -1,0 +1,21 @@
+@import "variables";
+
+%circle-style{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+%banner-section-title{
+    display: inline-block;
+    font-family: $family;
+    color: $white-color;
+    font-weight: $bold;
+}
+
+%hero-banner-section-title{
+    font-size: 43px;
+    font-family: $family;
+    font-weight: $bold;
+    color: $hero-banner-section-title-color;
+}
