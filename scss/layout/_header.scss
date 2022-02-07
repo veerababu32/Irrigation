@@ -24,10 +24,10 @@
     .header-logo-section{
         @include display-align-properities(flex, center);
 
-        .vidc-name{
+        .header-section-title{
             width: 240px;
             font-size: 15px;
-            font-weight: $bold;
+            font-weight: $weight;
             @include padding(0, 0, 0, 10px);
         }
     }
@@ -38,7 +38,7 @@
 
         .top-links{
             @include flex-row-properities(flex-end, center);
-            margin-bottom: 11px;
+            margin-bottom: 13px;
 
             .info-section{
                 @include padding(0, 20px, 0, 0);
@@ -57,19 +57,19 @@
             .small-size{
                 @include padding(0, 10px, 0, 0);
                 font-size: 11px;
-                font-weight: $bold;
+                font-weight: $weight;
             }
 
             .medium-size{
                 @include padding(0, 10px, 0, 0);
                 font-size: 14px;
-                font-weight: $bold;
+                font-weight: $weight;
             }
 
             .large-size{
                 @include padding(0, 20px, 0, 0);
                 font-size: 16px;
-                font-weight: $bold;
+                font-weight: $weight;
             }
 
             .language-section{
@@ -91,7 +91,7 @@
             .dot-green{
                 @extend %circle-style;
                 background-color: $dot-green-color;
-                margin: 0 15px 0 15px;
+                margin: 0 15px;
             }
 
             .dot-yellow{

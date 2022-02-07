@@ -20,7 +20,7 @@
             font-size: 57px;
             background-color: $banner-title-color;
             margin: 0;
-            @include padding(0, 29px, 0, 18px);
+            @include padding(0, 26px, 0, 17px);
         }
 
         .banner-sub-title{
@@ -60,40 +60,39 @@
 
 /*----------*/
 
-/* .Hero-banner-section */
-.hero-banner-section{
+/* .Manage-and-develop-section */
+.manage-develop-section{
     display: flex;
     position: relative;
     top: 130px;
     left: 0;
     right: 0;
-    @include padding(0, 0, 0, 55px);
+    @include padding(0, 0, 0, 59px);
 
-    .hero-banner-content-section{
+    .manage-develop-content-section{
         width: 876px;
         height: 219px;
     }
 
-    .hero-banner-title{
+    .manage-develop-sub-title{
         @extend %hero-banner-section-title;
-        margin: 0 0 15px 0;
-        @include padding(0, 0, 0, 100px);
+        margin: 0 0 15px 109px;
     }
 
-    .irrigation-title{
+    .manage-develop-title-img{
         width: 742px;
         height: 90px;
     }
 
-    .hero-banner-sub-title{
+    .manage-develop-location{
         @extend %hero-banner-section-title;
         margin: 15px 0 0 0;
         text-align: end;
     }
 
-    .vidarbha-logo{
+    .manage-develop-logo{
         position: absolute;
-        right: 50px;
+        right: 46px;
         width: 182px;
         height: 169px;
     }
@@ -101,7 +100,7 @@
 /*----------*/
 
 /* section-3 */
-.products-section{
+.services-section{
     background: linear-gradient(rgba(250,250,250,0.6) 0%, rgba(230,230,230,0.6) 100%);
     height: 416px;
     @include flex-row-properities(center, center);
@@ -137,18 +136,22 @@
 
 /* section-4 */
 .know-more-about-us-section{
-    background-color: $know-more-about-us-color;
+    background-color: $know-more-about-us-bg-color;
     height: 521px;
     position: relative;
     font-family: $family;
 
     .container{
-        display: flex;
-        justify-content: space-between;
+        @include display-justify-properities(flex, space-between);
         position: absolute;
         top: 92px;
         left: 0;
         right: 0;
+
+        .nature-img{
+            width: 556px;
+            height: 352px;
+        }
 
         .nature-section{
             @include flex-row-properities(center, center);
@@ -160,7 +163,7 @@
 
         .outer-circle{
             border: 2px solid $play-button-outer-circle-color;
-            @include padding(4.5px, 1px, 1px, 3.5px);
+            @include padding(4px, 1px, 1px, 4px);
             border-radius: 50px;
             width: 80px;
             height: 80px;
@@ -175,31 +178,29 @@
             height: 68px;
         }
 
-        .play-button{
-            height: 22px;
-            width: 25px;
-        }
-
         .about-section{
             width: 395px;
             height: 367px;
 
-            .about-heading{
+            .about-section-title{
                 color: $white-color;
                 font-weight: $weight;
+                margin: 0;
             }
 
-            .description{
+            .about-section-description{
                 color: $white-color;
+                font-size: 16px;
+                margin: 13px 0 30px 0;
             }
 
-            .know-more-button{
-                @include padding(10px, 10px, 10px, 10px);
+            .about-section-button{
+                display: inline-block;
                 background-color: $play-button-color;
                 color: $white-color;
+                font-size: 22px;
                 border: none;
-                height: 47px;
-                width: 183px;
+                @include padding(10px, 21px, 10px, 21px);
             }
         }
     }
