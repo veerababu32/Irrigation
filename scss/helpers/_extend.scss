@@ -10,12 +10,19 @@
     display: inline-block;
     font-family: $family;
     color: $white-color;
-    font-weight: $weight;
+    font-weight: 700;
 }
 
 %hero-banner-section-title{
     font-size: 43px;
     font-family: $family;
-    font-weight: $weight;
+    font-weight: 700;
     color: $hero-banner-section-title-color;
+}
+
+%container{
+    max-width: 1125px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 }

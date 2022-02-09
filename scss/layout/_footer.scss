@@ -6,28 +6,29 @@
     margin-top: 84px;
 }
 
-.footer-section{
+.footer{
     width: 100%;
     background-color: $vidc-heading-color;
 
-    .container{
-        display: flex;
-        justify-content: space-between;
-        @include padding(20px, 0, 30px, 0);
-        left: 0;
-        right: 0;
-    }
+    @at-root{
+        &__container{
+            @extend %container;
+            display: flex;
+            justify-content: space-between;
+            @include padding(20px, 15px, 30px, 15px !important);
+            left: 0;
+            right: 0;
+        }
 
-    .footer-left-section{
-        display: flex;
-        flex-direction: column;
-        width: 714px;
-        height: 343px;
-        margin-top: 32px;
-    }
+        &__left-section{
+            display: flex;
+            flex-direction: column;
+            width: 714px;
+            height: 343px;
+            margin-top: 32px;
+        }
 
-    div{
-        .subscribe-input{
+        &__subscribe-input{
             width:70%;
             height:46px;
             background-color: $agricultural-heading-color;
@@ -37,13 +38,13 @@
             @include padding(0, 300px, 0, 18px);
         }
 
-        .subscribe-btn{
+        &__subscribe-btn{
             background-color: $white-color;
-            color: $black-color;
+            color: $links-color;
             position:relative;
             border-radius:90px;
             border-style:none;
-            font-weight:$weight;
+            font-weight:700;
             font-size:16px;
             padding: 10px 30px;
             top:1px;
@@ -53,112 +54,111 @@
             }
         }
 
-        .subscribe span{
+        &__subscribe-title{
             margin-bottom: 16px;
             font-size:22px;
-            font-weight: $weight;
+            font-weight: 700;
             color:$white-color;
             font-family: $family;
+
+            ::placeholder{
+                color: $white-color;
+                font-size: 14px;
+                font-family: $family;
+                @include padding(0, 0, 0, 10px);
+            }
         }
 
-        ::placeholder{
-            color: $white-color;
-            font-size: 14px;
+        &__links-section{
+            display: flex;
+            margin-top: 20px;
             font-family: $family;
-            @include padding(0, 0, 0, 10px);
         }
-    }
 
-    .footer-links-section{
-        display: flex;
-        margin-top: 20px;
-        font-family: $family;
-    }
+        &__below-links{
+            @include padding(0, 100px, 0, 0);
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__about-us-info{
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+    
+        &__important-links-info{
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 2px 0;
+        }
+    
+        &__blank-space{
+            height: 22px;
+        }
+    
+        &__about-info{
+            font-size: 14px;
+            margin: 10px 0 0 0;
+        }
+    
+        &__copyright{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 67px;
+        }
+    
+        &__copyright-section{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__copyright-description{
+            font-size: 12px;
+            color: $white-color;
+            font-family: $family;
+            font-weight: 700;
+            margin: 0;
+        }
+    
+        &__copyright-all-rights{
+            font-size: 12px;
+            color: $white-color;
+            font-family: $family;
+            margin: 0;
+        }
+    
+        &__copyright-powerred-by{
+            text-align: end;
+            font-size: 12px;
+            color: $white-color;
+            font-family: $family;
+            font-weight: 700;
+            margin: 0;
+        }
+    
+        &__copyright-webworks{
+            text-align: end;
+            color: $white-color;
+            font-size: 12px;
+            font-family: $family;
+            margin: 0;
+        }
 
-    .footer-below-links{
-        @include padding(0, 100px, 0, 0);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-us-info{
-        font-size: 18px;
-        font-weight: $weight;
-        margin: 0;
-    }
-
-    .important-links-info{
-        font-size: 18px;
-        font-weight: $weight;
-        margin: 0 0 2px 0;
-    }
-
-    .blank-space{
-        height: 22px;
-    }
-
-    .footer-copyright{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 67px;
-    }
-
-    .footer-copyright-section{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-info{
-        font-size: 14px;
-        margin: 10px 0 0 0;
-    }
-
-    .footer-copyright-description{
-        font-size: 12px;
-        color: $white-color;
-        font-family: $family;
-        font-weight: $weight;
-        margin: 0;
-    }
-
-    .footer-copyright-all-rights{
-        font-size: 12px;
-        color: $white-color;
-        font-family: $family;
-        margin: 0;
-    }
-
-    .footer-copyright-powerred-by{
-        text-align: end;
-        font-size: 12px;
-        color: $white-color;
-        font-family: $family;
-        font-weight: $weight;
-        margin: 0;
-    }
-
-    .footer-copyright-webworks{
-        text-align: end;
-        color: $white-color;
-        font-size: 12px;
-        font-family: $family;
-        margin: 0;
-    }
-
-    .footer-right-section{
-        background-color: $agricultural-heading-color;
-        padding: 36px;
-        border-radius: 20px;
-        width: 371px;
-        height: 375px;
-        color: $white-color;
-
-        .footer-contact-us{
+        &__right-section{
+            background-color: $agricultural-heading-color;
+            padding: 36px;
+            border-radius: 20px;
+            width: 371px;
+            height: 375px;
+            color: $white-color;
+        }
+        &__contact-container{
             display: flex;
             align-items: center;
         }
 
-        .contact-us-section{
+        &__contact-us-section{
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -166,83 +166,75 @@
             margin-left: 26px;
         }
 
-        .gmail-img{
+        &__gmail-img{
             margin-top: 20px;
         }
 
-        .email-contact-us{
+        &__email-contact-us{
             display: flex;
             flex-direction: column;
             margin-left: 16px;
         }
 
-        .locate-us-info{
+        &__locate-us-info{
             font-size: 18px;
             font-family: $family;
-            font-weight: $weight;
+            font-weight: 700;
             margin: 0 0 5px 0;
         }
 
-        .call-us-info{
+        &__call-us-info{
             font-size: 18px;
             font-family: $family;
-            font-weight: $weight;
+            font-weight: 700;
             margin: 17px 0 5px 0;
         }
 
-        .email-us-info{
+        &__email-us-info{
             font-size: 18px;
             font-family: $family;
-            font-weight: $weight;
+            font-weight: 700;
             margin: 17px 0 5px 0;
         }
 
-        .address{
+        &__address{
             font-size: 14px;
             font-family: $family;
             margin: 0 0 17px 0;
             width: 250px;
         }
 
-        .call-us{
+        &__call-us{
             font-size: 14px;
             font-family: $family;
             margin: 0 0 17px 0;
         }
 
-        .email-us{
+        &__email-us{
             font-size: 14px;
             font-family: $family;
         }
 
-        .follow-us-section{
+        &__follow-us-section{
             display: flex;
             margin-top: 36px;
         }
 
-        .follow-us-info{
+        &__follow-us-info{
             font-size: 18px;
-            font-weight: $weight;
+            font-weight: 700;
             font-family: $family;
             @include padding(0, 30px, 0, 0);
             border-right: 1px solid #787878;
         }
 
-        .icons-section{
+        &__icons-section{
             @include padding(0, 0, 0, 10px);
-            .icons{
-                color: $white-color;
-                @include padding(0, 0, 0, 20px);
-            }
         }
 
-        .hr-line{
-            border: solid 1px #707070;
-        }
-
-        .vr-line{
-            border: #707070 1px solid;
-            height: auto;
+        &__icons{
+            color: $white-color;
+            @include padding(0, 0, 0, 20px);
         }
     }
 

@@ -1,125 +1,141 @@
 @import "../helpers/_helpers-dir";
 
 /* Header section */
-.container{
-    width: 1125px;
-    margin: 0 auto;
-}
 
-.header-section{
+.header{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.11);
     position: relative;
     z-index: 1;
 
-    .container{
-        @include display-justify-properities(flex, space-between);
-        @include padding(18px, 0, 18px, 0);
-    }
+    @at-root{
+        &__container{
+            @extend %container;
+            @include display-justify-properities(flex, space-between);
+            @include padding(18px, 15px, 18px, 15px !important);
+            font-family: $family;
+        }
 
-    a{
-        font-family: $family;
-        color: $header-section-color;
-    }
+        &__logo{
+            @include display-align-properities(flex, center);
+        }
 
-    .header-logo-section{
-        @include display-align-properities(flex, center);
-
-        .header-section-title{
+        &__title{
             width: 240px;
             font-size: 15px;
-            font-weight: $weight;
+            font-weight: 700;
+            font-family: $family;
+            color: $header-section-color;
             @include padding(0, 0, 0, 10px);
         }
-    }
 
-    .header-right-section{
-        @include display-direction-justify-properties(flex, column);
-        font-size: 14px;
-
-        .top-links{
-            @include flex-row-properities(flex-end, center);
-            margin-bottom: 13px;
-
-            .info-section{
-                @include padding(0, 20px, 0, 0);
-            }
-
-            .top-links-section{
-                display: flex;
-            }
-
-            .page-size-section{
-               @include display-align-properities(flex, center);
-                border-right: 1px solid $top-links-border-color;
-                @include padding(0, 0, 0, 20px);
-            }
-
-            .small-size{
-                @include padding(0, 10px, 0, 0);
-                font-size: 11px;
-                font-weight: $weight;
-            }
-
-            .medium-size{
-                @include padding(0, 10px, 0, 0);
-                font-size: 14px;
-                font-weight: $weight;
-            }
-
-            .large-size{
-                @include padding(0, 20px, 0, 0);
-                font-size: 16px;
-                font-weight: $weight;
-            }
-
-            .language-section{
-                border-right: 1px solid $top-links-border-color;
-                @include padding(0, 15px, 0, 15px);
-            }
-
-            .color-section{
-                @include display-align-properities(flex, center);
-                border-right: 1px solid $top-links-border-color;
-                @include padding(0, 15px, 0, 15px);
-            }
-
-            .dot-blue{
-                @extend %circle-style;
-                background-color: $dot-blue-color;
-            }
-
-            .dot-green{
-                @extend %circle-style;
-                background-color: $dot-green-color;
-                margin: 0 15px;
-            }
-
-            .dot-yellow{
-                @extend %circle-style;
-                background-color: $dot-yellow-color;
-            }
-
-            .search-section{
-                @include display-align-properities(flex, center);
-                @include padding(0, 2px, 0, 10px);
-            }
+        &__right-section{
+            @include display-direction-justify-properties(flex, column);
+            font-size: 14px;
         }
 
-        .below-links{
+        &__top-links{
+            @include flex-row-properities(flex-end, center);
+            margin-bottom: 13px;
+        }
+
+        &__info{
+            @include padding(0, 20px, 0, 0);
+            color: $header-section-color;
+        }
+
+        &__knowledge{
+            color: $header-section-color;
+        }
+
+        &__top-links-section{
+            display: flex;
+        }
+
+        &__page-size-section{
+           @include display-align-properities(flex, center);
+            border-right: 1px solid $top-links-border-color;
+            @include padding(0, 0, 0, 20px);
+        }
+
+        &__small-size{
+            @include padding(0, 10px, 0, 0);
+            font-size: 11px;
+            font-weight: 700;
+            color: $header-section-color;
+        }
+
+        &__medium-size{
+            @include padding(0, 10px, 0, 0);
+            font-size: 14px;
+            font-weight: 700;
+            color: $header-section-color;
+        }
+
+        &__large-size{
+            @include padding(0, 20px, 0, 0);
+            font-size: 16px;
+            font-weight: 700;
+            color: $header-section-color;
+        }
+
+        &__language-section{
+            border-right: 1px solid $top-links-border-color;
+            @include padding(0, 15px, 0, 15px);
+        }
+
+        #language{
             font-family: $family;
-            .below-links-info{
-                @include padding(0, 10px, 0, 10px);
-                border-right: 1px solid $below-links-border-color;
-            }
+            font-weight: 500;
+            color: $header-section-color;
+        }
 
-            .home-info{
-                @include padding(0, 10px, 0, 0);
-                border-right: 1px solid $below-links-border-color;
-            }
+        &__color-section{
+            @include display-align-properities(flex, center);
+            border-right: 1px solid $top-links-border-color;
+            @include padding(0, 15px, 0, 15px);
+        }
 
-            .governing-councils-decisions-info{
-                @include padding(0, 0, 0, 10px);
-            }
+        &__dot{
+            @extend %circle-style;
+        }
+
+        &__dot--blue{
+            background-color: $dot-blue-color;
+        }
+
+        &__dot--green{
+            background-color: $dot-green-color;
+            margin: 0 15px;
+        }
+
+        &__dot--yellow{
+            background-color: $dot-yellow-color;
+        }
+
+        &__search-section{
+            @include display-align-properities(flex, center);
+            @include padding(0, 2px, 0, 10px);
+        }
+
+        &__below-links{
+            font-family: $family;
+        }
+
+        &__below-links-info{
+            @include padding(0, 10px, 0, 10px);
+            border-right: 1px solid $below-links-border-color;
+            color: $header-section-color;
+        }
+
+        &__home-info{
+            @include padding(0, 10px, 0, 0);
+            border-right: 1px solid $below-links-border-color;
+            color: $header-section-color;
+        }
+
+        &__governing-councils-decisions-info{
+            @include padding(0, 0, 0, 10px);
+            color: $header-section-color;
         }
     }
 }
