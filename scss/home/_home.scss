@@ -1,14 +1,12 @@
-@import "../helpers/_helpers-dir";
-
 /* Banner-section */
 .banner {
     position: relative;
 
-    .banner-img{
+    .banner-img {
         width: 100%;
     }
 
-    @at-root{
+    @at-root {
 
         &__content {
             @extend %container;
@@ -37,7 +35,7 @@
 
         &__detail-link {
             font-size: 22px;
-            font-family: $family;
+            font-family: $primary-family;
             background-color: $white-color;
             color: $banner-button-color;
             @include padding(10px, 20px, 10px, 22.5px);
@@ -73,7 +71,7 @@
     margin-top: 130px !important;
     @include padding(0, 15px, 0, 59px !important);
 
-    @at-root{
+    @at-root {
         &__content {
             width: 876px;
         }
@@ -84,8 +82,18 @@
             margin: 0;
         }
 
-        &__title-img {
-            width: 742px;
+        &__title {
+            margin: 0;
+            font-size: 120px;
+            font-weight: 900;
+            padding: 0;
+            line-height: 1;
+            background-image: url("../../images/banner-img.png");
+            font-family: $primary-family;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: cover;
         }
 
         &__location {
@@ -113,7 +121,7 @@
     @include display-justify-properities(flex, center);
     padding: 149px 0 121px 0;
 
-    @at-root{
+    @at-root {
         &__list-items {
             list-style-type: none;
             display: flex;
@@ -126,7 +134,7 @@
             margin-right: 87px;
         }
 
-        &__items--sprinkler{
+        &__items:nth-last-child(1) {
             margin-right: 0;
         }
 
@@ -137,12 +145,12 @@
 
         &__links-text {
             display: flex;
-            font-family: $family;
+            font-family: $primary-family;
             font-size: 16px;
             color: $links-color;
             padding-top: 17px;
             font-weight: 600;
-            width: 96px;
+            width: 97px;
         }
 
         &__links-text--agriculture {
@@ -158,9 +166,9 @@
     background-color: $know-more-about-us-bg-color;
     height: 521px;
     position: relative;
-    font-family: $family;
+    font-family: $primary-family;
 
-    @at-root{
+    @at-root {
         &__container {
             @extend %container;
             @include display-justify-properities(flex, space-between);
@@ -211,6 +219,7 @@
             font-weight: 700;
             margin: 0;
         }
+
         &__description {
             color: $white-color;
             font-size: 16px;

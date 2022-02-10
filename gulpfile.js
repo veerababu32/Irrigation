@@ -6,7 +6,7 @@ const browsersync=require('browser-sync').create();
 function style(){
   return gulp.src('./scss/style.scss')
   .pipe(sass())
-  .pipe(gulp.dest('./css'))
+  .pipe(gulp.dest('./css/style.css'))
   .pipe(browsersync.stream());
 
   }
@@ -18,7 +18,7 @@ function style(){
                      baseDir:'./'
                        }
       });
-      gulp.watch('./scss/**/*.scss',style);
+      gulp.watch('./css/**/*.css',style);
       gulp.watch('./*.html').on('change',browsersync.reload);
       gulp.watch('./js/**/*.js').on('change',browsersync.reload);
   }

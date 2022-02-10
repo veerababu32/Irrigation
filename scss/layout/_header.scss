@@ -1,5 +1,3 @@
-@import "../helpers/_helpers-dir";
-
 /* Header section */
 
 .header{
@@ -12,7 +10,7 @@
             @extend %container;
             @include display-justify-properities(flex, space-between);
             @include padding(18px, 15px, 18px, 15px !important);
-            font-family: $family;
+            font-family: $primary-family;
         }
 
         &__logo{
@@ -23,7 +21,7 @@
             width: 240px;
             font-size: 15px;
             font-weight: 700;
-            font-family: $family;
+            font-family: $primary-family;
             color: $header-section-color;
             @include padding(0, 0, 0, 10px);
         }
@@ -84,7 +82,7 @@
         }
 
         #language{
-            font-family: $family;
+            font-family: $primary-family;
             font-weight: 500;
             color: $header-section-color;
         }
@@ -118,7 +116,7 @@
         }
 
         &__below-links{
-            font-family: $family;
+            font-family: $primary-family;
         }
 
         &__below-links-info{
@@ -127,14 +125,15 @@
             color: $header-section-color;
         }
 
-        &__home-info{
+        &__below-links-info:nth-child(1){
             @include padding(0, 10px, 0, 0);
             border-right: 1px solid $below-links-border-color;
             color: $header-section-color;
         }
 
-        &__governing-councils-decisions-info{
+        &__below-links-info:nth-last-child(1){
             @include padding(0, 0, 0, 10px);
+            border: none;
             color: $header-section-color;
         }
     }
