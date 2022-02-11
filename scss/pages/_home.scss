@@ -69,7 +69,7 @@
     position: relative;
     @extend %container;
     margin-top: 130px !important;
-    @include padding(0, 15px, 0, 59px !important);
+    @include padding(0, 15px, 0, 70px !important);
 
     @at-root {
         &__content {
@@ -78,13 +78,13 @@
 
         &__sub-title {
             @extend %hero-banner-section-title;
-            padding: 0 0 14px 111px;
+            padding: 0 0 3px 111px;
             margin: 0;
         }
 
         &__title {
             margin: 0;
-            font-size: 120px;
+            font-size: 131px;
             font-weight: 900;
             padding: 0;
             line-height: 1;
@@ -94,11 +94,12 @@
             -webkit-background-clip: text;
             background-clip: text;
             background-size: cover;
+            background-position: center;
         }
 
         &__location {
             @extend %hero-banner-section-title;
-            padding: 14px 0 0 0;
+            padding: 3px 0 0 0;
             margin: 0;
             text-align: end;
         }
@@ -119,9 +120,14 @@
 .services {
     background: linear-gradient(rgba(250, 250, 250, 0.6) 0%, rgba(230, 230, 230, 0.6) 100%);
     @include display-justify-properities(flex, center);
-    padding: 149px 0 121px 0;
+    padding: 162px 0 122px 0;
 
     @at-root {
+        .grey-color-bg-img{
+            width: 32%;
+            height: 100%;
+        }
+
         &__list-items {
             list-style-type: none;
             display: flex;

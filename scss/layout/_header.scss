@@ -27,7 +27,7 @@
         }
 
         &__right-section{
-            @include display-direction-justify-properties(flex, column);
+            @include display-direction-properties(flex, column);
             font-size: 14px;
         }
 
@@ -113,6 +113,10 @@
         &__search-section{
             @include display-align-properities(flex, center);
             @include padding(0, 2px, 0, 10px);
+        }
+
+        a{
+            color: #505050;
         }
 
         &__below-links{
