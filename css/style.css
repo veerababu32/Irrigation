@@ -512,7 +512,7 @@ a {
   font-weight: 900;
   padding: 0;
   line-height: 1;
-  background-image: url("../../images/banner-img.png");
+  background-image: url("/images/banner-img.png");
   font-family: "Lato", sans-serif;
   color: transparent;
   -webkit-background-clip: text;
@@ -542,11 +542,6 @@ a {
   justify-content: center;
   padding: 162px 0 122px 0;
 }
-.grey-color-bg-img {
-  width: 32%;
-  height: 100%;
-}
-
 .services__list-items {
   list-style-type: none;
   display: flex;
@@ -558,12 +553,14 @@ a {
   text-align: center;
   margin-right: 87px;
 }
-
-.services__items:nth-last-child(1) {
+.services__items:nth-child(4) span {
+  width: 120px;
+}
+.services__items:nth-child(5) {
   margin-right: 0;
 }
 
-.services__logos {
+.services__logo {
   width: 75px;
   height: 75px;
 }
@@ -578,10 +575,6 @@ a {
   width: 97px;
 }
 
-.services__links-text--agriculture {
-  width: 120px;
-}
-
 /* ------- */
 /* section-4 */
 .about-us {
@@ -589,6 +582,10 @@ a {
   height: 521px;
   position: relative;
   font-family: "Lato", sans-serif;
+}
+.about-us .grey-color-bg-img {
+  width: 32%;
+  height: 100%;
 }
 .about-us__container {
   display: flex;

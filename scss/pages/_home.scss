@@ -88,7 +88,7 @@
             font-weight: 900;
             padding: 0;
             line-height: 1;
-            background-image: url("../../images/banner-img.png");
+            background-image: url("/images/#{banner-img}.png");
             font-family: $primary-family;
             color: transparent;
             -webkit-background-clip: text;
@@ -123,11 +123,6 @@
     padding: 162px 0 122px 0;
 
     @at-root {
-        .grey-color-bg-img{
-            width: 32%;
-            height: 100%;
-        }
-
         &__list-items {
             list-style-type: none;
             display: flex;
@@ -138,13 +133,19 @@
         &__items {
             text-align: center;
             margin-right: 87px;
+
+            &:nth-child(4){
+                span{
+                    width: 120px;
+                }
+            }
+
+            &:nth-child(5){
+                margin-right: 0;
+            }
         }
 
-        &__items:nth-last-child(1) {
-            margin-right: 0;
-        }
-
-        &__logos {
+        &__logo {
             width: 75px;
             height: 75px;
         }
@@ -158,10 +159,6 @@
             font-weight: 600;
             width: 97px;
         }
-
-        &__links-text--agriculture {
-            width: 120px;
-        }
     }
 }
 
@@ -173,6 +170,11 @@
     height: 521px;
     position: relative;
     font-family: $primary-family;
+
+    .grey-color-bg-img{
+        width: 32%;
+        height: 100%;
+    }
 
     @at-root {
         &__container {
