@@ -5,6 +5,7 @@
 body {
   width: 100%;
   margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 a {
@@ -41,17 +42,25 @@ a:hover {
   padding: 0 15px;
 }
 
+.footer__copyright-webworks, .footer__copyright-powerred-by, .footer__copyright-all-rights, .footer__copyright-description {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0;
+}
+
 /* Header section */
 .header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.11);
   position: relative;
   z-index: 1;
 }
+.header a {
+  color: #505050;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   padding: 18px 15px 18px 15px !important;
-  font-family: "Lato", sans-serif;
 }
 
 .header__logo {
@@ -63,7 +72,6 @@ a:hover {
   width: 240px;
   font-size: 15px;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
   color: #505050;
   padding: 0 0 0 10px;
 }
@@ -128,7 +136,6 @@ a:hover {
 }
 
 #language {
-  font-family: "Lato", sans-serif;
   font-weight: 500;
   color: #505050;
 }
@@ -159,14 +166,6 @@ a:hover {
   padding: 0 2px 0 10px;
 }
 
-a {
-  color: #505050;
-}
-
-.header__below-links {
-  font-family: "Lato", sans-serif;
-}
-
 .header__below-links-info {
   padding: 0 10px 0 10px;
   border-right: 1px solid #505050;
@@ -189,12 +188,29 @@ a {
 .grass-img {
   width: 100%;
   display: flex;
-  margin-top: 84px;
 }
 
 .footer {
   width: 100%;
   background-color: #1b7642;
+}
+.footer a {
+  color: #ffffff;
+}
+.footer a.footer__subscribe-btn {
+  position: absolute;
+  background-color: #ffffff;
+  color: #505050;
+  border-radius: 90px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 30px;
+  top: 46px;
+  right: 40px;
+}
+.footer a.footer__subscribe-btn:hover {
+  cursor: pointer;
 }
 .footer__container {
   left: 0;
@@ -204,64 +220,43 @@ a {
   padding: 20px 15px 30px 15px !important;
 }
 
-.footer__subscribe {
-  position: relative;
-}
-
 .footer__left-section {
   display: flex;
   flex-direction: column;
   width: 714px;
-  height: 343px;
-  margin-top: 20px;
+  margin-top: 25px;
+}
+
+.footer__subscribe {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.footer__subscribe-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .footer__subscribe-input {
   width: 95%;
   height: 46px;
-  background-color: #0f5c30;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 80px;
   border-style: none;
   margin-top: 16px;
   padding: 0 0 0 15px;
 }
 
-.footer__subscribe-btn {
-  position: absolute;
-  background-color: #ffffff;
-  font-family: "Lato", sans-serif;
-  color: #505050 !important;
-  border-radius: 90px;
-  border-style: none;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 10px 30px;
-  top: 46px;
-  right: 40px;
-}
-.footer__subscribe-btn:hover {
-  cursor: pointer;
-}
-
-.footer__subscribe-title {
-  margin-bottom: 16px;
-  font-size: 22px;
-  font-weight: 700;
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
-}
-
 ::placeholder {
   color: #ffffff;
   font-size: 14px;
-  font-family: "Lato", sans-serif;
   padding: 0 0 0 10px;
 }
 
 .footer__links-section {
   display: flex;
-  margin-top: 20px;
-  font-family: "Lato", sans-serif;
+  margin-bottom: 75px;
 }
 
 .footer__below-links {
@@ -269,32 +264,28 @@ a {
   display: flex;
   flex-direction: column;
 }
-
-.footer__about-us-info {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
+.footer__below-links :nth-child(5) {
+  margin: 0 0 0 0;
 }
 
-.footer__important-links-info {
+.footer__title-info {
   font-size: 18px;
   font-weight: 700;
-  margin: 0 0 2px 0;
+  margin: 0 0 10px 0;
 }
 
 .footer__blank-space {
-  height: 22px;
+  height: 32px;
 }
 
-.footer__about-info {
+.footer__links-info {
   font-size: 14px;
-  margin: 10px 0 0 0;
+  margin: 0 0 10px 0;
 }
 
 .footer__copyright {
   display: flex;
   justify-content: space-between;
-  margin-top: 75px;
 }
 
 .footer__copyright-section {
@@ -303,49 +294,32 @@ a {
 }
 
 .footer__copyright-description {
-  font-size: 12px;
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-weight: 700;
-  margin: 0;
-}
-
-.footer__copyright-all-rights {
-  font-size: 12px;
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
-  margin: 0;
 }
 
 .footer__copyright-powerred-by {
   text-align: end;
-  font-size: 12px;
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-weight: 700;
-  margin: 0;
 }
 
 .footer__copyright-webworks {
   text-align: end;
-  color: #ffffff;
-  font-size: 12px;
-  font-family: "Lato", sans-serif;
-  margin: 0;
 }
 
 .footer__right-section {
-  background-color: #0f5c30;
+  background-color: rgba(29, 29, 29, 0.1);
   padding: 36px;
-  border-radius: 20px;
   width: 371px;
-  height: 375px;
   color: #ffffff;
 }
 
-.footer__contact-container {
+.footer__contact-section {
   display: flex;
   align-items: center;
+  margin: 0 0 17px 0;
+}
+.footer__contact-section:nth-child(3) {
+  margin: 0 0 36px 0;
 }
 
 .footer__contact-us-section {
@@ -353,67 +327,44 @@ a {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #787878;
-  margin-left: 26px;
-}
-
-.footer__gmail-img {
-  margin-top: 20px;
+  margin: 0 0 0 26px;
 }
 
 .footer__email-contact-us {
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
+  margin: 0 0 0 16px;
 }
 
-.footer__locate-us-info {
+.footer__contact-us-info {
   font-size: 18px;
-  font-family: "Lato", sans-serif;
   font-weight: 700;
   margin: 0 0 5px 0;
 }
 
-.footer__call-us-info {
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  margin: 17px 0 5px 0;
-}
-
-.footer__email-us-info {
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  margin: 17px 0 5px 0;
-}
-
 .footer__address {
   font-size: 14px;
-  font-family: "Lato", sans-serif;
   margin: 0 0 17px 0;
   width: 250px;
 }
 
 .footer__call-us {
   font-size: 14px;
-  font-family: "Lato", sans-serif;
   margin: 0 0 17px 0;
 }
 
 .footer__email-us {
   font-size: 14px;
-  font-family: "Lato", sans-serif;
 }
 
 .footer__follow-us-section {
   display: flex;
-  margin-top: 36px;
+  align-items: center;
 }
 
 .footer__follow-us-info {
   font-size: 18px;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
   padding: 0 30px 0 0;
   border-right: 1px solid #787878;
 }
@@ -427,13 +378,10 @@ a {
   padding: 0 0 0 20px;
 }
 
-.footer a {
-  color: #ffffff;
-}
-
 /* Banner-section */
 .banner {
   position: relative;
+  margin-bottom: 130px;
 }
 .banner .banner-img {
   width: 100%;
@@ -464,7 +412,6 @@ a {
 
 .banner__detail-link {
   font-size: 22px;
-  font-family: "Lato", sans-serif;
   background-color: #ffffff;
   color: #272727;
   padding: 10px 20px 10px 22.5px;
@@ -494,7 +441,6 @@ a {
 .manage-develop {
   display: flex;
   position: relative;
-  margin-top: 130px !important;
   padding: 0 15px 0 70px !important;
 }
 .manage-develop__content {
@@ -512,17 +458,16 @@ a {
   font-weight: 900;
   padding: 0;
   line-height: 1;
-  background-image: url("/images/banner-img.png");
-  font-family: "Lato", sans-serif;
+  background-image: url(./../images/banner-img.png);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-size: cover;
   background-position: center;
+  padding: 0 0 3px 0;
 }
 
 .manage-develop__location {
-  padding: 3px 0 0 0;
   margin: 0;
   text-align: end;
 }
@@ -531,7 +476,6 @@ a {
   position: absolute;
   right: 46px;
   width: 182px;
-  height: 169px;
 }
 
 /*----------*/
@@ -567,7 +511,6 @@ a {
 
 .services__links-text {
   display: flex;
-  font-family: "Lato", sans-serif;
   font-size: 16px;
   color: #505050;
   padding-top: 17px;
@@ -581,7 +524,7 @@ a {
   background-color: #3f3531;
   height: 521px;
   position: relative;
-  font-family: "Lato", sans-serif;
+  margin-bottom: 84px;
 }
 .about-us .grey-color-bg-img {
   width: 32%;
@@ -600,7 +543,7 @@ a {
   width: 556px;
 }
 
-.about-us__nature-section {
+.about-us__left-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -632,7 +575,7 @@ a {
   position: absolute;
 }
 
-.about-us__content-section {
+.about-us__right-section {
   width: 395px;
 }
 
@@ -640,13 +583,13 @@ a {
   font-size: 36px;
   color: #ffffff;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 13px 0;
 }
 
 .about-us__description {
   color: #ffffff;
   font-size: 16px;
-  margin: 13px 0 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .about-us__link-button {

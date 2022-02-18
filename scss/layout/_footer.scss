@@ -1,12 +1,31 @@
 .grass-img{
     width: 100%;
     display: flex;
-    margin-top: 84px;
 }
 
 .footer{
     width: 100%;
     background-color: $footer-bg-color;
+
+    a{
+        color: $white-color;
+    }
+
+    a.footer__subscribe-btn{
+        position: absolute;
+        background-color: $white-color;
+        color: $links-color;
+        border-radius:90px;
+        border-style:none;
+        font-weight:700;
+        font-size:16px;
+        padding: 10px 30px;
+        top:46px;
+        right: 40px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
 
     @at-root{
         &__container{
@@ -17,96 +36,70 @@
             @include padding(20px, 15px, 30px, 15px !important);
         }
 
-        &__subscribe{
-            position: relative;
-        }
-
         &__left-section{
             @include display-direction-properties(flex, column);
             width: 714px;
-            height: 343px;
-            margin-top: 20px;
+            margin-top: 25px;
+        }
+
+        &__subscribe{
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        &__subscribe-title{
+            font-size:22px;
+            font-weight: 700;
+            color:$white-color;
         }
 
         &__subscribe-input{
             width:95%;
             height:46px;
-            background-color: $subscribe-bg-color;
+            background-color: rgb(0 0 0 / 10%);
             border-radius:80px;
             border-style:none;
             margin-top: 16px;
             @include padding(0, 0, 0, 15px);
         }
 
-        &__subscribe-btn{
-            position: absolute;
-            background-color: $white-color;
-            font-family: $primary-family;
-            color: $links-color !important;
-            border-radius:90px;
-            border-style:none;
-            font-weight:700;
-            font-size:16px;
-            padding: 10px 30px;
-            top:46px;
-            right: 40px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-
-        &__subscribe-title{
-            margin-bottom: 16px;
-            font-size:22px;
-            font-weight: 700;
-            color:$white-color;
-            font-family: $primary-family;
-        }
-
         ::placeholder{
             color: $white-color;
             font-size: 14px;
-            font-family: $primary-family;
             @include padding(0, 0, 0, 10px);
         }
 
         &__links-section{
             display: flex;
-            margin-top: 20px;
-            font-family: $primary-family;
+            margin-bottom: 75px;
         }
 
         &__below-links{
             @include padding(0, 100px, 0, 0);
-            display: flex;
-            flex-direction: column;
+            @include display-direction-properties(flex, column);
+
+            :nth-child(5){
+                @include margin(0, 0, 0, 0);
+            }
         }
 
-        &__about-us-info{
+        &__title-info{
             font-size: 18px;
             font-weight: 700;
-            margin: 0;
-        }
-
-        &__important-links-info{
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0 0 2px 0;
+            @include margin(0, 0, 10px, 0);
         }
 
         &__blank-space{
-            height: 22px;
+            height: 32px;
         }
 
-        &__about-info{
+        &__links-info{
             font-size: 14px;
-            margin: 10px 0 0 0;
+            @include margin(0, 0, 10px, 0);
         }
 
         &__copyright{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 75px;
+            @include display-justify-properities(flex, space-between);
         }
 
         &__copyright-section{
@@ -115,118 +108,84 @@
         }
 
         &__copyright-description{
-            font-size: 12px;
-            color: $white-color;
-            font-family: $primary-family;
+            @extend %copyright-text;
             font-weight: 700;
-            margin: 0;
         }
 
         &__copyright-all-rights{
-            font-size: 12px;
-            color: $white-color;
-            font-family: $primary-family;
-            margin: 0;
+            @extend %copyright-text;
         }
 
         &__copyright-powerred-by{
+            @extend %copyright-text;
             text-align: end;
-            font-size: 12px;
-            color: $white-color;
-            font-family: $primary-family;
             font-weight: 700;
-            margin: 0;
         }
 
         &__copyright-webworks{
+            @extend %copyright-text;
             text-align: end;
-            color: $white-color;
-            font-size: 12px;
-            font-family: $primary-family;
-            margin: 0;
         }
 
         &__right-section{
-            background-color: $subscribe-bg-color;
+            background-color: rgb(29, 29, 29, 10%);
             padding: 36px;
-            border-radius: 20px;
             width: 371px;
-            height: 375px;
             color: $white-color;
         }
-        &__contact-container{
-            display: flex;
-            align-items: center;
+
+        &__contact-section{
+            @include display-align-properities(flex, center);
+            @include margin(0, 0, 17px, 0);
+
+            &:nth-child(3){
+                @include margin(0, 0, 36px, 0);
+            }
         }
 
         &__contact-us-section{
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid #787878;
-            margin-left: 26px;
-        }
-
-        &__gmail-img{
-            margin-top: 20px;
+            @include display-direction-properties(flex, column);
+            border-bottom: 1px solid $contact-us-line-color;
+            @include margin(0, 0, 0, 26px);
         }
 
         &__email-contact-us{
-            display: flex;
-            flex-direction: column;
-            margin-left: 16px;
+            @include display-direction-properties(flex, column);
+            @include margin(0, 0, 0, 16px);
         }
 
-        &__locate-us-info{
+        &__contact-us-info{
             font-size: 18px;
-            font-family: $primary-family;
             font-weight: 700;
-            margin: 0 0 5px 0;
-        }
-
-        &__call-us-info{
-            font-size: 18px;
-            font-family: $primary-family;
-            font-weight: 700;
-            margin: 17px 0 5px 0;
-        }
-
-        &__email-us-info{
-            font-size: 18px;
-            font-family: $primary-family;
-            font-weight: 700;
-            margin: 17px 0 5px 0;
+            @include margin(0, 0, 5px, 0);
         }
 
         &__address{
             font-size: 14px;
-            font-family: $primary-family;
-            margin: 0 0 17px 0;
+            @include margin(0, 0, 17px, 0);
             width: 250px;
         }
 
         &__call-us{
             font-size: 14px;
-            font-family: $primary-family;
-            margin: 0 0 17px 0;
+            @include margin(0, 0, 17px, 0);
         }
 
         &__email-us{
             font-size: 14px;
-            font-family: $primary-family;
         }
 
         &__follow-us-section{
             display: flex;
-            margin-top: 36px;
+            align-items: center;
         }
 
         &__follow-us-info{
             font-size: 18px;
             font-weight: 700;
-            font-family: $primary-family;
             @include padding(0, 30px, 0, 0);
-            border-right: 1px solid #787878;
+            border-right: 1px solid $contact-us-line-color;
         }
 
         &__icons-section{
@@ -237,9 +196,5 @@
             color: $white-color;
             @include padding(0, 0, 0, 20px);
         }
-    }
-
-    a{
-        color: $white-color;
     }
 }
