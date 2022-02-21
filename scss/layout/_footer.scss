@@ -168,8 +168,7 @@
         }
 
         &__follow-us-section{
-            display: flex;
-            align-items: center;
+            @include display-align-properities(flex, center);
         }
 
         &__follow-us-info{
