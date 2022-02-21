@@ -1,34 +1,41 @@
 @import "variables";
 
-%circle-style{
+%circle-style {
     height: 15px;
     width: 15px;
     border-radius: 50%;
 }
 
-%banner-section-title{
+%banner-section-title {
     display: inline-block;
     font-family: $primary-family;
     color: $white-color;
     font-weight: 700;
 }
 
-%hero-banner-section-title{
+%hero-banner-section-title {
     font-size: 43px;
     font-family: $primary-family;
     font-weight: 700;
     color: $hero-banner-section-title-color;
 }
 
-%container{
+%container {
     max-width: 1125px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-%copyright-text{
-    color: $white-color;
+%copyright {
+    display: flex;
+    flex-direction: column;
     font-size: 12px;
-    margin: 0;
+    color: $white-color;
+}
+
+%contact-us{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
 }

@@ -42,10 +42,17 @@ a:hover {
   padding: 0 15px;
 }
 
-.footer__copyright-webworks, .footer__copyright-powerred-by, .footer__copyright-all-rights, .footer__copyright-description {
-  color: #ffffff;
+.footer__copyright-right, .footer__copyright-left {
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
-  margin: 0;
+  color: #ffffff;
+}
+
+.footer__email-us, .footer__contact-us {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
 }
 
 /* Header section */
@@ -187,34 +194,13 @@ a:hover {
 /* --------- */
 .grass-img {
   width: 100%;
-  display: flex;
+  display: block;
 }
 
 .footer {
-  width: 100%;
   background-color: #1b7642;
 }
-.footer a {
-  color: #ffffff;
-}
-.footer a.footer__subscribe-btn {
-  position: absolute;
-  background-color: #ffffff;
-  color: #505050;
-  border-radius: 90px;
-  border-style: none;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 10px 30px;
-  top: 46px;
-  right: 40px;
-}
-.footer a.footer__subscribe-btn:hover {
-  cursor: pointer;
-}
 .footer__container {
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   padding: 20px 15px 30px 15px !important;
@@ -223,7 +209,7 @@ a:hover {
 .footer__left-section {
   display: flex;
   flex-direction: column;
-  width: 714px;
+  width: 696px;
   margin-top: 25px;
 }
 
@@ -245,40 +231,56 @@ a:hover {
   border-radius: 80px;
   border-style: none;
   margin-top: 16px;
-  padding: 0 0 0 15px;
-}
-
-::placeholder {
+  padding: 0 205px 0 15px;
   color: #ffffff;
-  font-size: 14px;
-  padding: 0 0 0 10px;
+}
+.footer__subscribe-input::placeholder {
+  color: #ffffff;
 }
 
-.footer__links-section {
+.footer__subscribe-btn {
+  position: absolute;
+  background-color: #ffffff;
+  color: #505050;
+  border-radius: 90px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 30px;
+  top: 46px;
+  right: 40px;
+}
+.footer__subscribe-btn:hover {
+  cursor: pointer;
+  background-color: #52b27b;
+}
+
+.footer-links {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 75px;
 }
-
-.footer__below-links {
+.footer-links a {
+  color: #ffffff;
+}
+.footer-links__section {
   padding: 0 100px 0 0;
   display: flex;
   flex-direction: column;
 }
-.footer__below-links :nth-child(5) {
-  margin: 0 0 0 0;
+.footer-links__section :nth-child(5) {
+  margin: 0;
 }
-
-.footer__title-info {
+.footer-links__title {
   font-size: 18px;
   font-weight: 700;
+  color: #ffffff;
   margin: 0 0 10px 0;
 }
-
-.footer__blank-space {
+.footer-links__blank-space {
   height: 32px;
 }
-
-.footer__links-info {
+.footer-links__info {
   font-size: 14px;
   margin: 0 0 10px 0;
 }
@@ -288,22 +290,12 @@ a:hover {
   justify-content: space-between;
 }
 
-.footer__copyright-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__copyright-description {
-  font-weight: 700;
-}
-
-.footer__copyright-powerred-by {
+.footer__copyright-right {
   text-align: end;
-  font-weight: 700;
 }
 
-.footer__copyright-webworks {
-  text-align: end;
+.footer__copyright-text {
+  font-weight: 700;
 }
 
 .footer__right-section {
@@ -316,45 +308,41 @@ a:hover {
 .footer__contact-section {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 0 17px 0;
 }
-.footer__contact-section:nth-child(3) {
+.footer__contact-section:nth-last-child(2) {
+  border-bottom: none;
   margin: 0 0 36px 0;
 }
 
-.footer__contact-us-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #787878;
-  margin: 0 0 0 26px;
+.footer__img {
+  margin: 0 26px 10px 0;
 }
 
-.footer__email-contact-us {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 16px;
+.footer__gmail-img {
+  margin-right: 16px;
 }
 
-.footer__contact-us-info {
+.footer__contact-us {
+  border-bottom: 1px solid rgba(248, 248, 248, 0.2);
+}
+
+.footer__contact-us-title {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 5px 0;
 }
 
-.footer__address {
+.footer__contact-us-links {
   font-size: 14px;
   margin: 0 0 17px 0;
-  width: 250px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.footer__call-us {
+.footer__email-link {
   font-size: 14px;
-  margin: 0 0 17px 0;
-}
-
-.footer__email-us {
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer__follow-us-section {
@@ -366,7 +354,7 @@ a:hover {
   font-size: 18px;
   font-weight: 700;
   padding: 0 30px 0 0;
-  border-right: 1px solid #787878;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer__icons-section {
@@ -522,36 +510,36 @@ a:hover {
 /* section-4 */
 .about-us {
   background-color: #3f3531;
-  height: 521px;
   position: relative;
   margin-bottom: 84px;
 }
 .about-us .grey-color-bg-img {
   width: 32%;
-  height: 100%;
+  display: block;
 }
 .about-us__container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   position: absolute;
   top: 92px;
   left: 0;
   right: 0;
 }
 
-.about-us__img {
-  width: 556px;
-}
-
 .about-us__left-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 85px;
+}
+
+.about-us__img {
+  width: 556px;
 }
 
 .about-us__button-bg {
-  border: 2px solid #4fc172;
   position: absolute;
+  border: 2px solid #4fc172;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,8 +547,8 @@ a:hover {
   width: 80px;
   height: 80px;
 }
-
 .about-us__button-bg::after {
+  position: absolute;
   background-color: #44af72;
   width: 70px;
   height: 70px;
@@ -572,7 +560,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
+  z-index: 1;
 }
 
 .about-us__right-section {
@@ -599,6 +588,9 @@ a:hover {
   font-size: 22px;
   border: none;
   padding: 10px 21px 10px 21px;
+}
+.about-us__link-button:hover {
+  background-color: #000000;
 }
 
 /* ---------------- */

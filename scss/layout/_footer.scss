@@ -1,44 +1,21 @@
 .grass-img{
     width: 100%;
-    display: flex;
+    display: block;
 }
 
 .footer{
-    width: 100%;
-    background-color: $footer-bg-color;
-
-    a{
-        color: $white-color;
-    }
-
-    a.footer__subscribe-btn{
-        position: absolute;
-        background-color: $white-color;
-        color: $links-color;
-        border-radius:90px;
-        border-style:none;
-        font-weight:700;
-        font-size:16px;
-        padding: 10px 30px;
-        top:46px;
-        right: 40px;
-        &:hover{
-            cursor: pointer;
-        }
-    }
+    background-color: $dark-green-color;
 
     @at-root{
         &__container{
             @extend %container;
-            left: 0;
-            right: 0;
             @include display-justify-properities(flex, space-between);
             @include padding(20px, 15px, 30px, 15px !important);
         }
 
         &__left-section{
             @include display-direction-properties(flex, column);
-            width: 714px;
+            width: 696px;
             margin-top: 25px;
         }
 
@@ -56,79 +33,88 @@
         &__subscribe-input{
             width:95%;
             height:46px;
-            background-color: rgb(0 0 0 / 10%);
+            background-color: rgba(0, 0, 0, 0.1);
             border-radius:80px;
             border-style:none;
             margin-top: 16px;
-            @include padding(0, 0, 0, 15px);
-        }
-
-        ::placeholder{
+            @include padding(0, 205px, 0, 15px);
             color: $white-color;
-            font-size: 14px;
-            @include padding(0, 0, 0, 10px);
-        }
-
-        &__links-section{
-            display: flex;
-            margin-bottom: 75px;
-        }
-
-        &__below-links{
-            @include padding(0, 100px, 0, 0);
-            @include display-direction-properties(flex, column);
-
-            :nth-child(5){
-                @include margin(0, 0, 0, 0);
+            &::placeholder{
+                color: $white-color;
             }
         }
 
-        &__title-info{
-            font-size: 18px;
-            font-weight: 700;
-            @include margin(0, 0, 10px, 0);
+        &__subscribe-btn{
+            position: absolute;
+            background-color: $white-color;
+            color: $links-color;
+            border-radius:90px;
+            border-style:none;
+            font-weight:700;
+            font-size:16px;
+            padding: 10px 30px;
+            top:46px;
+            right: 40px;
+            &:hover{
+                cursor: pointer;
+                background-color: $dot-green-color;
+            }
         }
 
-        &__blank-space{
-            height: 32px;
-        }
+        .footer-links{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 75px;
 
-        &__links-info{
-            font-size: 14px;
-            @include margin(0, 0, 10px, 0);
+            a{
+                color: $white-color;
+            }
+
+            &__section{
+                @include padding(0, 100px, 0, 0);
+                @include display-direction-properties(flex, column);
+
+                :nth-child(5){
+                    margin: 0;
+                }
+            }
+
+            &__title{
+                font-size: 18px;
+                font-weight: 700;
+                color: $white-color;
+                @include margin(0, 0, 10px, 0);
+            }
+
+            &__blank-space{
+                height: 32px;
+            }
+
+            &__info{
+                font-size: 14px;
+                @include margin(0, 0, 10px, 0);
+            }
         }
 
         &__copyright{
             @include display-justify-properities(flex, space-between);
         }
 
-        &__copyright-section{
-            display: flex;
-            flex-direction: column;
+        &__copyright-left{
+            @extend %copyright;
         }
 
-        &__copyright-description{
-            @extend %copyright-text;
-            font-weight: 700;
-        }
-
-        &__copyright-all-rights{
-            @extend %copyright-text;
-        }
-
-        &__copyright-powerred-by{
-            @extend %copyright-text;
+        &__copyright-right{
+            @extend %copyright;
             text-align: end;
-            font-weight: 700;
         }
 
-        &__copyright-webworks{
-            @extend %copyright-text;
-            text-align: end;
+        &__copyright-text{
+            font-weight: 700;
         }
 
         &__right-section{
-            background-color: rgb(29, 29, 29, 10%);
+            background-color: rgba(29, 29, 29, 0.1);
             padding: 36px;
             width: 371px;
             color: $white-color;
@@ -136,44 +122,49 @@
 
         &__contact-section{
             @include display-align-properities(flex, center);
+            flex-wrap: wrap;
+
             @include margin(0, 0, 17px, 0);
 
-            &:nth-child(3){
+            &:nth-last-child(2){
+                border-bottom: none;
                 @include margin(0, 0, 36px, 0);
             }
         }
 
-        &__contact-us-section{
-            width: 100%;
-            @include display-direction-properties(flex, column);
-            border-bottom: 1px solid $contact-us-line-color;
-            @include margin(0, 0, 0, 26px);
+
+        &__img{
+            @include margin(0, 26px, 10px, 0);
         }
 
-        &__email-contact-us{
-            @include display-direction-properties(flex, column);
-            @include margin(0, 0, 0, 16px);
+        &__gmail-img{
+            margin-right: 16px;
         }
 
-        &__contact-us-info{
+        &__contact-us{
+            @extend %contact-us;
+            border-bottom: 1px solid rgba(248, 248, 248, 0.2);
+        }
+
+        &__email-us{
+            @extend %contact-us;
+        }
+
+        &__contact-us-title{
             font-size: 18px;
             font-weight: 700;
             @include margin(0, 0, 5px, 0);
         }
 
-        &__address{
+        &__contact-us-links{
             font-size: 14px;
             @include margin(0, 0, 17px, 0);
-            width: 250px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        &__call-us{
+        &__email-link{
             font-size: 14px;
-            @include margin(0, 0, 17px, 0);
-        }
-
-        &__email-us{
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         &__follow-us-section{
@@ -185,7 +176,7 @@
             font-size: 18px;
             font-weight: 700;
             @include padding(0, 30px, 0, 0);
-            border-right: 1px solid $contact-us-line-color;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         &__icons-section{

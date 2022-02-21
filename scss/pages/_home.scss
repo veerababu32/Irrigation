@@ -158,54 +158,57 @@
 
 /* section-4 */
 .about-us {
-    background-color: $know-more-about-us-bg-color;
-    height: 521px;
+    background-color: $brown-bg-color;
     position: relative;
     margin-bottom: 84px;
 
     .grey-color-bg-img{
         width: 32%;
-        height: 100%;
+        display: block;
     }
 
     @at-root {
         &__container {
             @extend %container;
-            @include display-justify-properities(flex, space-between);
+            display: flex;
+            flex-wrap: wrap;
             position: absolute;
             top: 92px;
             left: 0;
             right: 0;
         }
 
+        &__left-section {
+            @include flex-row-properities(center, center);
+            margin-right: 85px;
+        }
+
         &__img {
             width: 556px;
         }
 
-        &__left-section {
-            @include flex-row-properities(center, center);
-        }
-
         &__button-bg{
-            border: 2px solid $button-outer-circle-color;
             position: absolute;
+            border: 2px solid $lightest-green-color;
             @include flex-row-properities(center, center);
             border-radius: 50px;
             width: 80px;
             height: 80px;
-        }
 
-        &__button-bg::after{
-            background-color: $button-bg-color;
-            width: 70px;
-            height: 70px;
-            border-radius: 50px;
-            content: close-quote;
+            &::after{
+                position: absolute;
+                background-color: $light-green-color;
+                width: 70px;
+                height: 70px;
+                border-radius: 50px;
+                content: close-quote;
+            }
         }
 
         &__play-button{
             @include flex-row-properities(center, center);
-            position: absolute;
+            position: relative;
+            z-index: 1;
         }
 
         &__right-section {
@@ -227,11 +230,14 @@
 
         &__link-button {
             display: inline-block;
-            background-color: $button-bg-color;
+            background-color: $light-green-color;
             color: $white-color;
             font-size: 22px;
             border: none;
             @include padding(10px, 21px, 10px, 21px);
+            &:hover{
+                background-color: #000000;
+            }
         }
     }
 }
