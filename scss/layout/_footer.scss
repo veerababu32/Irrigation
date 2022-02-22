@@ -25,9 +25,11 @@
         }
 
         &__subscribe-title{
+            display: block;
             font-size:22px;
             font-weight: 700;
             color:$white-color;
+            margin-bottom: 16px;
         }
 
         &__subscribe-input{
@@ -36,7 +38,6 @@
             background-color: rgba(0, 0, 0, 0.1);
             border-radius:80px;
             border-style:none;
-            margin-top: 16px;
             @include padding(0, 205px, 0, 15px);
             color: $white-color;
             &::placeholder{
