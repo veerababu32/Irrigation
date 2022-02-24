@@ -58,7 +58,8 @@
             right: 40px;
             &:hover{
                 cursor: pointer;
-                background-color: $dot-green-color;
+                background-color: $light-green-color;
+                color: $white-color;
             }
         }
 
@@ -116,56 +117,53 @@
 
         &__right-section{
             background-color: rgba(29, 29, 29, 0.1);
+            color: $white-color;
             padding: 36px;
             width: 371px;
-            color: $white-color;
         }
 
-        &__contact-section{
+        .footer-contact-us{
             @include display-align-properities(flex, center);
             flex-wrap: wrap;
-
             @include margin(0, 0, 17px, 0);
 
             &:nth-last-child(2){
                 border-bottom: none;
                 @include margin(0, 0, 36px, 0);
             }
-        }
 
+            &__icon{
+                @include margin(0, 26px, 10px, 0);
+            }
 
-        &__img{
-            @include margin(0, 26px, 10px, 0);
-        }
+            &:nth-last-child(2) img{
+                @include margin(0, 16px, 0, 0);
+            }
 
-        &__gmail-img{
-            margin-right: 16px;
-        }
+            &__content{
+                @extend %contact-us;
+                border-bottom: 1px solid rgba(248, 248, 248, 0.2);
+            }
 
-        &__contact-us{
-            @extend %contact-us;
-            border-bottom: 1px solid rgba(248, 248, 248, 0.2);
-        }
+            &:nth-last-child(2) &__content{
+                border-bottom: none;
+            }
 
-        &__email-us{
-            @extend %contact-us;
-        }
+            &__title{
+                font-size: 18px;
+                font-weight: 700;
+                @include margin(0, 0, 5px, 0);
+            }
 
-        &__contact-us-title{
-            font-size: 18px;
-            font-weight: 700;
-            @include margin(0, 0, 5px, 0);
-        }
+            &__links{
+                font-size: 14px;
+                @include margin(0, 0, 17px, 0);
+                color: rgba(255, 255, 255, 0.8);
+            }
 
-        &__contact-us-links{
-            font-size: 14px;
-            @include margin(0, 0, 17px, 0);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        &__email-link{
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
+            &:nth-last-child(2) &__links{
+                margin-bottom: 0;
+            }
         }
 
         &__follow-us-section{
