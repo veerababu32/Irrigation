@@ -64,15 +64,25 @@ a:hover {
 .header a {
   color: #505050;
 }
+.header .hamburger {
+  display: none;
+}
+.header .disable {
+  display: none;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   padding: 18px 15px 18px 15px !important;
 }
 
-.header__logo {
+.header__left-section {
   display: flex;
   align-items: center;
+}
+
+.header__logo-img {
+  padding: 0 10px 0 0;
 }
 
 .header__title {
@@ -80,7 +90,6 @@ a:hover {
   font-size: 15px;
   font-weight: 700;
   color: #505050;
-  padding: 0 0 0 10px;
 }
 
 .header__right-section {
@@ -142,7 +151,7 @@ a:hover {
   padding: 0 15px 0 15px;
 }
 
-#language {
+.header__language {
   font-weight: 500;
   color: #505050;
 }
@@ -170,7 +179,7 @@ a:hover {
 .header__search-section {
   display: flex;
   align-items: center;
-  padding: 0 2px 0 10px;
+  padding: 0 0 0 10px;
 }
 
 .header__below-links-info {
@@ -191,6 +200,95 @@ a:hover {
   color: #505050;
 }
 
+@media screen and (max-width: 1124px) {
+  .header__logo-img {
+    width: 45px;
+  }
+  .header__title {
+    width: 210px;
+    font-size: 14px;
+  }
+  .header__right-section {
+    font-size: 13px;
+  }
+  .header__top-links {
+    margin-bottom: 10px;
+  }
+  .header__dot {
+    height: 12px;
+    width: 12px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+  .header__logo-img {
+    width: 45px;
+  }
+  .header .hamburger {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+  }
+  .header__right-section {
+    display: none;
+  }
+  .header .right-section {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .header__top-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    margin-bottom: 0;
+  }
+  .header__below-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__info {
+    padding: 0 0 5px 0;
+  }
+  .header__top-links-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__page-size-section {
+    border-right: none;
+    padding: 0 0 5px 0;
+  }
+  .header__language-section {
+    border-right: none;
+    padding: 0 0 5px 0;
+  }
+  .header__color-section {
+    border-right: none;
+    padding: 0 0 5px 0;
+  }
+  .header__search-section {
+    padding: 0;
+  }
+  .header__below-links-info {
+    border-right: none;
+    padding: 0 0 5px 0;
+  }
+  .header__below-links-info:nth-child(1) {
+    border-right: none;
+    padding: 0 0 5px 0;
+  }
+  .header__below-links-info:nth-last-child(1) {
+    padding: 0 0 5px 0;
+    border: none;
+  }
+}
 /* --------- */
 .grass-img {
   width: 100%;
