@@ -5,6 +5,6 @@ let crossIcon = document.getElementById("crossIcon");
 function hamburgerSection(){
     crossIcon.classList.toggle("disable");
     barIcon.classList.toggle("disable");
-    headerRightSection.classList.toggle("header___right-section");
+    headerRightSection.classList.toggle("header__right-section");
     headerRightSection.classList.toggle("right-section");
 }

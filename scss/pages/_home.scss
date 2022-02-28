@@ -62,12 +62,12 @@
     }
 }
 
-@media screen and (max-width: 1124px){
+@media only screen and (max-width: 1024px){
     .banner{
         margin-bottom: 100px;
 
         &__content{
-            bottom: 55px;
+            bottom: 50px;
         }
 
         &__title {
@@ -77,7 +77,7 @@
         }
 
         &__sub-title {
-            font-size: 32px;
+            font-size: 30px;
             margin: 0 0 30px 0;
             padding: 12px 18px;
         }
@@ -99,65 +99,134 @@
     }
 }
 
-@media screen and (max-width: 992px){
+@media only screen and (max-width: 992px){
     .banner{
-        margin-bottom: 85px;
+        margin-bottom: 80px;
 
         &__content{
-            bottom: 50px;
+            bottom: 30px;
         }
 
         &__title {
-            font-size: 45px;
+            font-size: 42px;
             padding: 0 18px 0 12px;
         }
 
         &__sub-title {
-            font-size: 30px;
+            font-size: 28px;
             margin: 0 0 26px 0;
             padding: 12px 16px;
         }
 
         &__detail-link {
             font-size: 18px;
-            padding: 12px;
-        }
-
-        &__message-section {
-            height: 55px;
-            width: 55px;
-        }
-    }
-}
-
-@media screen and (max-width: 768px){
-    .banner{
-        margin-bottom: 75px;
-
-        &__content{
-            bottom: 40px;
-        }
-
-        &__title {
-            font-size: 40px;
-            padding: 0 16px 0 12px;
-        }
-
-        &__sub-title {
-            font-size: 24px;
-            margin: 0 0 22px 0;
-            padding: 12px 14px;
-        }
-
-        &__detail-link {
-            font-size: 14px;
-            padding: 12px;
         }
 
         &__message-section {
             height: 50px;
             width: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .banner{
+        margin-bottom: 60px;
+
+        &__content{
+            bottom: 20px;
+        }
+
+        &__title {
+            font-size: 34px;
+            padding:5px 10px;
+        }
+
+        &__sub-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        &__detail-link {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        &__message-section {
+            height: 40px;
+            width: 40px;
             top: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .banner{
+        margin-bottom: 40px;
+
+        &__content{
+            bottom: 10px;
+        }
+
+        &__title {
+            font-size: 18px;
+            padding:2px 5px;
+        }
+
+        &__sub-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+            padding: 8px;
+        }
+
+        &__detail-link {
+            font-size: 10px;
+            padding: 5px;
+        }
+
+        &__message-section {
+            height: 25px;
+            width: 25px;
+            top: 88%;
+        }
+
+        &__message-box{
+            height: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .banner{
+        margin-bottom: 20px;
+
+        &__content{
+            bottom: 5px;
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+
+        &__sub-title {
+            font-size: 10px;
+            padding: 5px;
+        }
+
+        &__detail-link {
+            font-size: 8px;
+            padding: 4px;
+        }
+
+        &__message-section {
+            height: 15px;
+            width: 15px;
+            top: 92%;
+        }
+
+        &__message-box{
+            height: 12px;
         }
     }
 }
@@ -212,89 +281,145 @@
     }
 }
 
-@media screen and (max-width: 1124px){
-    .manage-develop {
-        @include padding(0, 15px, 0, 66px !important);
-
-        &__content {
-            width: 850px;
-        }
-
-        &__sub-title {
-            font-size: 40px;
-            @include padding(0, 0, 3px, 120px);
-        }
-
-        &__title {
-            font-size: 126px;
-        }
-
-        &__location {
-            font-size: 40px;
-        }
-
-        &__logo {
-            right: 76px;
-            width: 170px;
-            height: 170px;
-        }
-    }
-}
-
-@media screen and (max-width: 992px){
+@media only screen and (max-width: 1024px){
     .manage-develop {
         @include padding(0, 15px, 0, 60px !important);
 
         &__content {
-            width: 765px;
+            width: 810px;
         }
 
         &__sub-title {
-            font-size: 38px;
-            @include padding(0, 0, 3px, 110px);
+            font-size: 40px;
+            @include padding(0, 0, 3px, 90px);
         }
 
         &__title {
-            font-size: 120px;
+            font-size: 122px;
         }
 
         &__location {
-            font-size: 38px;
+            font-size: 40px;
         }
 
         &__logo {
             right: 36px;
-            width: 162px;
-            height: 162px;
+            width: 160px;
+            height: 160px;
         }
     }
 }
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 992px){
+    .manage-develop {
+        @include padding(0, 15px, 0, 55px !important);
+
+        &__content {
+            width: 750px;
+        }
+
+        &__sub-title {
+            font-size: 36px;
+            @include padding(0, 0, 3px, 80px);
+        }
+
+        &__title {
+            font-size: 116px;
+        }
+
+        &__location {
+            font-size: 36px;
+        }
+
+        &__logo {
+            right: 32px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
     .manage-develop {
         @include padding(0, 15px, 0, 45px !important);
 
         &__content {
-            width: 580px;
+            width: 600px;
         }
 
         &__sub-title {
-            font-size: 28px;
+            font-size: 30px;
             @include padding(0, 0, 3px, 60px);
         }
 
         &__title {
-            font-size: 90px;
+            font-size: 96px;
         }
 
         &__location {
-            font-size: 28px;
+            font-size: 30px;
         }
 
         &__logo {
-            right: 14px;
-            width: 124px;
-            height: 124px;
+            right: 12px;
+            width: 130px;
+            height: 134px;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .manage-develop {
+        @include padding(0, 15px, 0, 25px !important);
+
+        &__content {
+            width: 600px;
+        }
+
+        &__sub-title {
+            font-size: 26px;
+            @include padding(0, 0, 3px, 30px);
+        }
+
+        &__title {
+            font-size: 74px;
+        }
+
+        &__location {
+            font-size: 26px;
+        }
+
+        &__logo {
+            right: 0px;
+            width: 90px;
+            height: 100px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .manage-develop {
+        @include padding(0, 15px, 0, 15px !important);
+
+        &__content {
+            width: 235px;
+        }
+
+        &__sub-title {
+            font-size: 14px;
+            @include padding(0, 0, 3px, 15px);
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__location {
+            font-size: 14px;
+        }
+
+        &__logo {
+            right: 16px;
+            width: 50px;
+            height: 50px;
         }
     }
 }
@@ -345,7 +470,7 @@
     }
 }
 
-@media screen and (max-width:1124px) {
+@media only screen and (max-width:1024px) {
     .services {
         @include padding(150px, 0, 112px, 0);
 
@@ -372,7 +497,7 @@
     }
 }
 
-@media screen and (max-width:992px) {
+@media only screen and (max-width:992px) {
     .services {
         @include padding(138px, 0, 106px, 0);
 
@@ -399,7 +524,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media only screen and (max-width:768px) {
     .services {
         @include padding(110px, 0, 94px, 0);
 
@@ -425,6 +550,75 @@
         }
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px;
+
+        &__items {
+            margin: 0 20px 20px 20px;
+
+            &:nth-child(1){
+                margin: 0 20px 20px 0;
+            }
+
+            &:nth-child(4){
+                margin: 0 0 20px 20px;
+            }
+
+            &:nth-child(5){
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .services {
+        padding: 40px;
+
+        &__items {
+            &:nth-child(1){
+                margin: 0 10px 20px 0;
+            }
+
+            &:nth-child(2){
+                margin: 0 10px 20px 10px;
+            }
+
+            &:nth-child(3){
+                margin: 0 0 20px 10px;
+            }
+
+            &:nth-child(4){
+                margin: 0 10px 0 0;
+
+                span{
+                    width: 75px;
+                }
+            }
+
+            &:nth-child(5){
+                margin: 0 0 0 10px;
+            }
+        }
+
+        &__logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__links-text {
+            font-size: 10px;
+            padding-top: 10px;
+            width: 60px;
+        }
+    }
+}
 /* ------- */
 
 /* section-4 */
@@ -444,7 +638,7 @@
             display: flex;
             flex-wrap: wrap;
             position: absolute;
-            top: 92px;
+            top: 70px;
             left: 0;
             right: 0;
         }
@@ -515,29 +709,24 @@
     }
 }
 
-@media screen and (max-width:1124px) {
+@media only screen and (max-width:1024px) {
     .about-us {
-        margin-bottom: 76px;
+        margin-bottom: 70px;
 
         .grey-color-bg-img{
-            width: 26%;
+            width: 30%;
         }
 
         &__container {
-            top: 26px;
+            top: 30px;
         }
 
         &__left-section {
-            margin-right: 70px;
+            margin-right: 60px;
         }
 
         &__img {
-            width: 530px;
-            height: 312px;
-        }
-
-        &__right-section {
-            width: 410px;
+            width: 500px;
         }
 
         &__title {
@@ -557,85 +746,68 @@
     }
 }
 
-@media screen and (max-width:992px) {
+@media only screen and (max-width:992px) {
     .about-us {
-        margin-bottom: 70px;
+        margin-bottom: 60px;
 
         .grey-color-bg-img{
-            width: 25%;
-        }
-
-        &__container {
-            top: 12px;
-        }
-
-        &__left-section {
-            margin-right: 60px;
+            width: 28%;
         }
 
         &__img {
             width: 460px;
-            height: 260px;
-        }
-
-        &__right-section {
-            width: 400px;
         }
 
         &__title {
             font-size: 30px;
-            @include margin(0, 0, 8px, 0);
         }
 
         &__description {
             font-size: 14px;
-            @include margin(0, 0, 20px, 0);
         }
 
         &__link-button {
             font-size: 18px;
-            @include padding(10px, 18px, 18px, 20px);
         }
     }
 }
 
-@media screen and (max-width:768px) {
+@media only screen and (max-width:768px){
     .about-us {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
 
         .grey-color-bg-img{
             width: 27%;
         }
 
         &__container {
-            top: 8px;
+            top: 20px;
         }
 
         &__left-section {
-            margin-right: 45px;
+            margin-right: 40px;
         }
 
         &__img {
-            width: 330px;
-            height: 200px;
+            width: 350px;
         }
 
         &__button-bg{
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
 
             &::after{
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
             }
         }
 
         &__button-bg &__play-button img{
-            width: 16px;
+            width: 15px;
         }
 
         &__right-section {
-            width: 325px;
+            width: 300px;
         }
 
         &__title {
@@ -650,7 +822,105 @@
 
         &__link-button {
             font-size: 12px;
-            padding: 10px;
+            padding: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width:576px){
+    .about-us {
+        height: 380px;
+        margin-bottom: 40px;
+
+        .grey-color-bg-img{
+            width: 100%;
+            height: 100px;
+        }
+
+        &__container {
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__left-section {
+            margin: 0 0 20px 0;
+        }
+
+        &__img {
+            width: 250px;
+        }
+
+        &__right-section {
+            width: 491px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__description {
+            font-size: 12px;
+            @include margin(0, 0, 5px, 0);
+        }
+    }
+}
+
+@media only screen and (max-width:320px){
+    .about-us {
+        height: 340px;
+        margin-bottom: 20px;
+
+        .grey-color-bg-img{
+            width: 100%;
+            height: 80px;
+        }
+
+        &__container {
+            top: 10px;
+        }
+
+        &__left-section {
+            margin: 0 0 10px 0;
+        }
+
+        &__img {
+            width: 200px;
+        }
+
+        &__button-bg{
+            width: 40px;
+            height: 40px;
+            border: 1px solid $lightest-green-color;
+
+            &::after{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__button-bg &__play-button img{
+            width: 10px;
+        }
+
+        &__right-section {
+            width: 260px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__description {
+            font-size: 10px;
+        }
+
+        &__link-button {
+            font-size: 10px;
         }
     }
 }
